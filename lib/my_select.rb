@@ -6,4 +6,5 @@ def my_select(collection)
     selected_collection.push(yield collection[index])
     index += 1
   end
+  selected_collection
 end
