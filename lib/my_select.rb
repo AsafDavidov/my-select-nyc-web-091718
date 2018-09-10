@@ -3,7 +3,9 @@ def my_select(collection)
   index = 0
   selected_collection = []
   while index < collection.size
-    selected_collection.push(yield collection[index])
+    if yield collection[index]
+      selected_collection.push(collection[index])
+    end
     index += 1
   end
   selected_collection
